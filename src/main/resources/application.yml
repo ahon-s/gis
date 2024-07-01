@@ -1,0 +1,66 @@
+server:
+  port: 8081
+
+
+spring:
+#  datasource:
+#    dynamic:
+#      primary: sw
+#      strict: false
+#      datasource:
+#        sw:
+##            url: jdbc:mysql://192.168.246.129:3306/mapserver-real
+##            username: root
+##            password: root
+##            driver-class-name: com.mysql.cj.jdbc.Driver
+#        #         url: jdbc:mysql://172.17.4.4:33306/gis_common
+#        #          username: fuuhoo
+#        #          password: siwei@fuuhoo!@#
+#        #          driver-class-name: com.mysql.cj.jdbc.Driver
+#            url: jdbc:mysql://10.0.0.132:23306/mapserver
+#            username: root
+#            password: siwei@mysql1234
+#            driver-class-name: com.mysql.cj.jdbc.Driver
+
+#
+#  redis:
+#    host: map_redis
+#    database: 11
+#    port: 6379
+
+  redis:
+    host: 10.0.0.129
+    database: 11
+    port: 18128
+    password: siwei123redis
+
+  datasource:
+    dynamic:
+      primary: sw
+      strict: false
+      datasource:
+        sw:
+          url: jdbc:mysql://172.17.4.4:33306/gis_common
+          username: fuuhoo
+          password: siwei@fuuhoo!@#
+          driver-class-name: com.mysql.cj.jdbc.Driver
+
+#    redis:
+#      host: gis_redis
+#      database: 11
+#      port: 6379
+#      password: siwei@redis
+
+#  redis:
+#    host: 10.0.0.132
+#    database: 11
+#    port: 6379
+#    password: siwei@redis
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+authValue:
+  adminCode: all
